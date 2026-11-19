@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0a0919">
+  <title>ABdOUly ❤️</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="sky" aria-hidden="true"></canvas>
+  <div id="hearts" aria-hidden="true"></div>
+
+  <main>
+    <!-- ACCUEIL -->
+    <section id="welcome" class="screen active">
+      <p class="mark">ABdOUly</p>
+      <h1>Bienvenue dans une petite expérience qui n'appartient qu'à nous.</h1>
+      <p class="sub">Avant de découvrir ce que j'ai préparé, quelques défis t'attendent. Voyons si tu connais vraiment les petits détails…</p>
+      <button id="start" class="btn glow">Entrer dans notre univers ✨</button>
+    </section>
+
+    <!-- QUIZ -->
+    <section id="quiz" class="screen">
+      <div class="hud">
+        <div class="bar"><i id="bar"></i></div>
+        <div class="meta"><span id="count">1/10</span><span id="score">✦ 0</span></div>
+      </div>
+      <div class="card glass" id="qcard">
+        <h2 id="qtitle"></h2>
+        <div id="opts" class="opts"></div>
+        <p id="react" class="react" aria-live="polite"></p>
+        <button id="next" class="btn" hidden>Continuer</button>
+      </div>
+    </section>
+
+    <!-- FIN DU QUIZ -->
+    <section id="end" class="screen">
+      <h1>Tu es arrivée jusqu'au bout… ❤️</h1>
+      <p class="sub">Ce jeu était rempli de petits détails. Mais le plus important n'était pas d'obtenir un score parfait. C'était de te faire vivre quelque chose de différent.</p>
+      <p class="final-score" id="finalScore"></p>
+      <button id="reveal" class="btn glow">Découvrir le dernier secret 💌</button>
+    </section>
+
+    <!-- LETTRE -->
+    <section id="letter" class="screen">
+      <div class="env" id="env"><div class="flap"></div><span class="seal">❤️</span></div>
+      <article class="paper glass" id="paper" hidden>
+        <div id="letterText"></div>
+        <button id="skip" class="link">Tout afficher</button>
+      </article>
+
+      <div id="after" class="after" hidden>
+        <h2>Alors Poulo… tu ne t'attendais pas à ça, hein ? 🤭</h2>
+        <div class="reacts" id="reacts"></div>
+        <p id="reactMsg" class="react" aria-live="polite"></p>
+        <a id="wa" class="btn glow" target="_blank" rel="noopener">Répondre à Abdou 💬</a>
+      </div>
+    </section>
+  </main>
+
+  <div id="fusion" class="fusion" aria-hidden="true"><span>ABdOUly ❤️</span></div>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
